@@ -596,10 +596,17 @@ img {
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .trust-badges-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .trust-badges-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
   }
 }
 
@@ -1835,3 +1842,148 @@ img {
   fill: #10b981;
   flex-shrink: 0;
 }
+
+/* Feature Spotlight: QR Code Verification & Office Flexibility */
+.spotlight-section {
+  padding: 64px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+@media (min-width: 860px) {
+  .spotlight-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.spotlight-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid #e2e8f0;
+  padding: 32px 28px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.1);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, #0284c7 100%);
+}
+
+.spotlight-card.card-office::before {
+  background: linear-gradient(90deg, #0f766e 0%, var(--wa-green) 100%);
+}
+
+.spotlight-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.spotlight-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #eff6ff;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.spotlight-card.card-office .spotlight-icon-wrap {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.spotlight-icon-wrap svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.spotlight-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #e0f2fe;
+  color: #0369a1;
+  margin-bottom: 6px;
+}
+
+.spotlight-card.card-office .spotlight-badge {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.spotlight-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1.35;
+}
+
+.spotlight-desc {
+  font-size: 0.92rem;
+  color: var(--gray-700);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.spotlight-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  margin-top: auto;
+}
+
+.spotlight-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #1e293b;
+}
+
+.spotlight-feature-item svg {
+  width: 16px;
+  height: 16px;
+  fill: #10b981;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.spotlight-action {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+

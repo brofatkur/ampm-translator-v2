@@ -1,32 +1,35 @@
-# AMPM Translator v2 — Landing Page High-Conversion Penerjemah Tersumpah Belanda
+# AMPM Translator v2 — Landing Page High-Conversion Penerjemah Tersumpah Multi-Bahasa
 
-Landing page resmi dan berkonversi tinggi untuk **Jasa Penerjemah Tersumpah Bahasa Belanda (Beëdigd Vertaler Nederlands)** oleh **AMPM Sworn Translator (PT Mega Akses Antarbangsa)**.
+Landing page resmi dan berkonversi tinggi untuk **Jasa Penerjemah Tersumpah Multi-Bahasa Resmi, Layanan Apostille Kemenkumham, dan Jasa Interpreter Profesional** oleh **AMPM Sworn Translator (PT Mega Akses Antarbangsa)**.
 
-Didesain khusus untuk meningkatkan konversi calon klien yang memerlukan penerjemahan dokumen resmi ke Bahasa Belanda atau Bahasa Indonesia untuk keperluan **Visa MVV, Kuliah/Beasiswa (Studielink/Nuffic), Pernikahan di Gemeente Belanda, Bekerja (Kennismigrant), hingga Kontrak Bisnis Bilateral (B2B)**.
+Didesain khusus untuk meningkatkan konversi calon klien yang memerlukan penerjemahan dokumen resmi ke berbagai bahasa dunia (Belanda, Inggris, Jerman, Mandarin, Jepang, Korea, Arab, Prancis, Spanyol) untuk keperluan **Visa, Beasiswa/Studi Luar Negeri, Pernikahan Campuran, Migrasi Kerja, hingga Transaksi Bisnis Internasional (B2B)**.
 
 ---
 
-## 🚀 Fitur Unggulan
+## 🚀 Fitur & Keunggulan Utama
 
+- **Pengalaman Lebih Dari 22 Tahun (Sejak 2004)**:
+  - Telah melayani puluhan ribu dokumen visa, beasiswa, dan korporasi multinasional dengan standar akurasi hukum tertinggi.
+- **Verifikasi Online QR Code (Global 24/7)**:
+  - Setiap dokumen resmi dibubuhi QR Code unik yang dapat divalidasi keabsahannya secara online realtime oleh Kedutaan Besar, Universitas luar negeri, dan instansi terkait di seluruh dunia.
+- **Fleksibilitas Penyerahan & Review Dokumen**:
+  - **Review Cepat via WhatsApp**: Foto/scan dokumen dapat dikirim ke WhatsApp untuk dicek kelayakan & dihitung estimasi biayanya secara GRATIS dalam < 3 menit.
+  - **Kantor Resmi di Kawasan Bisnis Jakarta**: Berkas fisik dapat dikirim atau diantar langsung ke kantor pusat kami di **AXA Tower Lantai 45, Jl. Prof. Dr. Satrio Kuningan, Jakarta Selatan**.
 - **Fokus Konversi WhatsApp**:
-  - Formulir hitung estimasi dan cek kelayakan dokumen interaktif di Hero section.
+  - Formulir hitung estimasi dan selektor multi-bahasa interaktif di Hero section.
   - Template pesan WhatsApp terisi otomatis (*pre-filled message*) ke nomor resmi `0817-322-271`.
   - **Sticky Bottom Bar** di tampilan ponsel untuk akses 1-klik tanpa perlu scroll.
   - **Floating WhatsApp Action Button** dengan indikator badge unread dan pulse animasi.
 - **Dynamic Real-Time Social Proof**:
-  - Notifikasi toast mengambang di sudut kiri bawah yang menampilkan aktivitas konsultasi klien terkini secara berkala.
+  - Notifikasi toast mengambang di sudut kiri bawah yang menampilkan aktivitas konsultasi klien multi-bahasa terkini secara berkala.
 - **Kredibilitas & Bukti Legalitas**:
-  - Penerjemah Tersumpah Berpengalaman lebih dari 15 Tahun.
-  - Terdaftar resmi di **Kemenkumham RI**, **Kemenlu RI**, serta diakui oleh **Kedutaan Besar Belanda di Jakarta & IND (*Immigratie- en Naturalisatiedienst*)**.
+  - Terdaftar resmi di **Kemenkumham RI**, **Kemenlu RI**, serta seluruh Kedutaan Besar Asing.
   - Bersertifikasi **ISO 9001:2015**.
-  - Garansi 100% Lolos di Kedutaan Belanda & Gemeente / Bebas Revisi.
+  - Garansi 100% Lolos di Kedutaan / Bebas Revisi.
   - 126+ Ulasan Bintang 5 Google Reviews (*Trustindex Verified*).
-- **Alamat & Google Maps Presisi**:
-  - AXA Tower 45th Floor, Jl. Prof. Dr. Satrio Kav 18, Kuningan, Setiabudi, Jakarta Selatan 12940.
-  - Peta Google Maps interaktif resmi AXA Tower Kuningan.
 - **Ultra Lightweight & Mobile-First**:
   - Dibuat dengan Pure HTML5, Modern CSS, dan Vanilla JavaScript.
-  - Total ukuran seluruh halaman < 60 KB, waktu muat (loading) di bawah 300ms.
+  - Ringan, waktu muat (loading) di bawah 300ms.
 
 ---
 
