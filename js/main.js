@@ -1,5 +1,5 @@
 /**
- * AMPM Sworn Translator - Penerjemah Tersumpah Belanda
+ * AMPM Sworn Translator - Multi-Language Official Translation
  * High-Conversion Interactions & Realtime Social Proof
  */
 
@@ -12,18 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
+      const targetLang = document.getElementById('targetLang')?.value || 'Bahasa Belanda / Inggris';
       const docType = document.getElementById('docType')?.value || 'Dokumen Umum';
-      const docPurpose = document.getElementById('docPurpose')?.value || 'Keperluan Umum / Studi / Visa';
+      const docPurpose = document.getElementById('docPurpose')?.value || 'Keperluan Studi / Visa / Bisnis';
       const docSpeedInput = document.querySelector('input[name="speedOption"]:checked');
       const docSpeed = docSpeedInput ? docSpeedInput.value : 'Normal (2-3 Hari Kerja)';
       const docPages = document.getElementById('docPages')?.value || 'Belum dihitung';
 
-      const message = `Halo AMPM Sworn Translator, saya ingin konsultasi & cek dokumen GRATIS untuk Terjemahan Tersumpah Belanda:%0A%0A` +
+      const message = `Halo AMPM Sworn Translator, saya ingin konsultasi & cek dokumen GRATIS untuk Layanan Penerjemah Tersumpah:%0A%0A` +
+        `🌐 *Bahasa Target:* ${encodeURIComponent(targetLang)}%0A` +
         `📄 *Jenis Dokumen:* ${encodeURIComponent(docType)}%0A` +
         `🎯 *Keperluan:* ${encodeURIComponent(docPurpose)}%0A` +
         `⏱️ *Waktu Pengerjaan:* ${encodeURIComponent(docSpeed)}%0A` +
-        `📑 *Perkiraan Jumlah:* ${encodeURIComponent(docPages)}%0A%0A` +
-        `Mohon estimasi biaya resmi, persyaratan, dan alur pengerjaannya. Terima kasih!`;
+        `📑 *Perkiraan Lembar/Catatan:* ${encodeURIComponent(docPages)}%0A%0A` +
+        `Mohon info estimasi biaya resmi, persyaratan legalitas, dan alur pengerjaannya. Terima kasih!`;
 
       const waUrl = `https://api.whatsapp.com/send/?phone=${WA_NUMBER}&text=${message}`;
       window.open(waUrl, '_blank', 'noopener,noreferrer');
@@ -67,16 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- 4. Dynamic Real-Time Social Proof Toast Notification ---
+  // --- 4. Dynamic Real-Time Multi-Language Social Proof Toast Notification ---
   const socialProofData = [
-    { name: "Bpk. Hendra S.", city: "Jakarta Selatan", doc: "Akta Lahir & Kartu Keluarga untuk Visa MVV", time: "Baru saja (2 mnt lalu)" },
-    { name: "Sarah Oktaviani", city: "Bandung", doc: "Ijazah & Transkrip S2 Universiteit Leiden", time: "4 menit yang lalu" },
-    { name: "PT Samudera Logistik", city: "Surabaya", doc: "Kontrak Bisnis Bilateral Belanda - Kilat 24 Jam", time: "7 menit yang lalu" },
-    { name: "Ibu Laksmi Handayani", city: "Tangerang", doc: "Buku Nikah & Surat Single untuk Gemeente", time: "11 menit yang lalu" },
-    { name: "dr. Kevin Pratama", city: "Semarang", doc: "Dokumen Medis & Registrasi Spesialis Belanda", time: "15 menit yang lalu" },
-    { name: "Bpk. Aditya Dharma", city: "Yogyakarta", doc: "SKCK Mabes Polri & Legalisasi Apostille", time: "18 menit yang lalu" },
-    { name: "Fadhil Ramadhan", city: "Bekasi", doc: "Transkrip Nilai & Motivation Letter TU Delft", time: "22 menit yang lalu" },
-    { name: "Maya Siregar", city: "Medan", doc: "Akta Cerai & Akta Lahir Kedubes Belanda", time: "28 menit yang lalu" }
+    { name: "Bpk. Hendra S.", city: "Jakarta Selatan", doc: "Akta Lahir & KK ke Bhs Belanda (Visa MVV)", time: "Baru saja (2 mnt lalu)" },
+    { name: "Clarissa Maharani", city: "Surabaya", doc: "Ijazah & Transkrip ke Bhs Inggris (Beasiswa LPDP)", time: "3 menit yang lalu" },
+    { name: "PT Indo Waja Perkasa", city: "Cikarang", doc: "Kontrak Joint Venture ke Bhs Mandarin (China)", time: "6 menit yang lalu" },
+    { name: "Dimas Aditya", city: "Bandung", doc: "Dokumen Visa Kerja ke Bhs Jerman (Ausbildung)", time: "9 menit yang lalu" },
+    { name: "Rizki Pratama", city: "Yogyakarta", doc: "Ijazah & SKCK ke Bhs Jepang (Visa COE)", time: "14 menit yang lalu" },
+    { name: "dr. Aminah Zahra", city: "Jakarta Timur", doc: "Dokumen Medis & Ijazah ke Bhs Arab (Saudi)", time: "18 menit yang lalu" },
+    { name: "Kevin Sanjaya", city: "Medan", doc: "Akta Notaris & AD/ART ke Bhs Korea (Seoul)", time: "23 menit yang lalu" },
+    { name: "Nathalie Siregar", city: "Denpasar", doc: "Buku Nikah & Single Status ke Bhs Prancis", time: "29 menit yang lalu" }
   ];
 
   const toastEl = document.getElementById('socialProofToast');
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const data = socialProofData[currentIndex];
     if (toastText) {
-      toastText.innerHTML = `<strong>${data.name}</strong> (${data.city}) baru saja konsultasi & cek dokumen: <span style="color:#0284c7;font-weight:600;">${data.doc}</span>`;
+      toastText.innerHTML = `<strong>${data.name}</strong> (${data.city}) baru saja konsultasi: <span style="color:#0284c7;font-weight:600;">${data.doc}</span>`;
     }
     if (toastTime) {
       toastTime.innerHTML = `<span>🟢</span> ${data.time}`;
@@ -123,17 +125,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initial trigger after 3.5 seconds, then repeat every 10 seconds
+  // Initial trigger after 3.5 seconds, then repeat every 11 seconds
   setTimeout(() => {
     showToast();
     toastTimer = setInterval(showToast, 11000);
   }, 3500);
 
-  // --- 5. Quick WhatsApp helper buttons ---
-  window.sendQuickWA = function(customDoc = '') {
-    let msg = `Halo AMPM Sworn Translator, saya ingin konsultasi dan cek dokumen gratis untuk terjemahan tersumpah Belanda.`;
-    if (customDoc) {
-      msg = `Halo AMPM Sworn Translator, saya butuh bantuan terjemahan tersumpah Bahasa Belanda untuk dokumen: *${customDoc}*. Mohon info estimasi biaya dan persyaratannya. Terima kasih!`;
+  // --- 5. Quick WhatsApp helper functions ---
+  window.sendQuickWA = function(lang = '', customDoc = '') {
+    let msg = `Halo AMPM Sworn Translator, saya ingin konsultasi dan cek dokumen gratis untuk terjemahan tersumpah.`;
+    if (lang && customDoc) {
+      msg = `Halo AMPM Sworn Translator, saya ingin menerjemahkan dokumen *${customDoc}* ke *Bahasa ${lang}*. Mohon info estimasi biaya dan persyaratannya. Terima kasih!`;
+    } else if (lang) {
+      msg = `Halo AMPM Sworn Translator, saya butuh jasa penerjemah tersumpah untuk *Bahasa ${lang}*. Mohon dibantu info prosedurnya. Terima kasih!`;
     }
     const url = `https://api.whatsapp.com/send/?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
