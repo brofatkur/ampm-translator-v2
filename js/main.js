@@ -71,14 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 4. Dynamic Real-Time Multi-Language Social Proof Toast Notification ---
   const socialProofData = [
-    { name: "Bpk. Hendra S.", city: "Jakarta Selatan", doc: "Akta Lahir & KK ke Bhs Belanda (Visa MVV)", time: "Baru saja (2 mnt lalu)" },
-    { name: "Clarissa Maharani", city: "Surabaya", doc: "Ijazah & Transkrip ke Bhs Inggris (Beasiswa LPDP)", time: "3 menit yang lalu" },
-    { name: "PT Indo Waja Perkasa", city: "Cikarang", doc: "Kontrak Joint Venture ke Bhs Mandarin (China)", time: "6 menit yang lalu" },
-    { name: "Dimas Aditya", city: "Bandung", doc: "Dokumen Visa Kerja ke Bhs Jerman (Ausbildung)", time: "9 menit yang lalu" },
-    { name: "Rizki Pratama", city: "Yogyakarta", doc: "Ijazah & SKCK ke Bhs Jepang (Visa COE)", time: "14 menit yang lalu" },
-    { name: "dr. Aminah Zahra", city: "Jakarta Timur", doc: "Dokumen Medis & Ijazah ke Bhs Arab (Saudi)", time: "18 menit yang lalu" },
-    { name: "Kevin Sanjaya", city: "Medan", doc: "Akta Notaris & AD/ART ke Bhs Korea (Seoul)", time: "23 menit yang lalu" },
-    { name: "Nathalie Siregar", city: "Denpasar", doc: "Buku Nikah & Single Status ke Bhs Prancis", time: "29 menit yang lalu" }
+    { name: "Bpk. Hen***", city: "Jakarta Selatan", doc: "Akta Lahir & KK ke Bhs Belanda (Visa MVV)", time: "Baru saja (2 mnt lalu)" },
+    { name: "Ibu Cla***", city: "Surabaya", doc: "Ijazah & Transkrip ke Bhs Inggris (Beasiswa LPDP)", time: "3 menit yang lalu" },
+    { name: "PT Ind***", city: "Cikarang", doc: "Kontrak Joint Venture ke Bhs Mandarin (China)", time: "6 menit yang lalu" },
+    { name: "Bpk. Dim***", city: "Bandung", doc: "Dokumen Visa Kerja ke Bhs Jerman (Ausbildung)", time: "9 menit yang lalu" },
+    { name: "Bpk. Riz***", city: "Yogyakarta", doc: "Ijazah & SKCK ke Bhs Jepang (Visa COE)", time: "14 menit yang lalu" },
+    { name: "dr. Ami***", city: "Jakarta Timur", doc: "Dokumen Medis & Ijazah ke Bhs Arab (Saudi)", time: "18 menit yang lalu" },
+    { name: "Bpk. Kev***", city: "Medan", doc: "Akta Notaris & AD/ART ke Bhs Korea (Seoul)", time: "23 menit yang lalu" },
+    { name: "Ibu Nat***", city: "Denpasar", doc: "Buku Nikah & Single Status ke Bhs Prancis", time: "29 menit yang lalu" }
   ];
 
   const toastEl = document.getElementById('socialProofToast');
@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
       toastTime.innerHTML = `<span>🟢</span> ${data.time}`;
     }
     if (toastAvatar) {
-      toastAvatar.textContent = data.name.charAt(0);
+      const cleanName = data.name.replace(/^(Bpk\.|Ibu\.|dr\.|PT\s+)/i, '').trim();
+      toastAvatar.textContent = (cleanName.charAt(0) || data.name.charAt(0)).toUpperCase();
     }
 
     toastEl.classList.add('show');
